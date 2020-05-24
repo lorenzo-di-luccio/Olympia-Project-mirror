@@ -13,5 +13,6 @@
 
 ### Istruzioni
 1. Clonate la repository
-2. Avviate un web server (anche in locale)
-3. Navigate sul sito e divertitevi
+2. Effettuate il dump del database grazie allo script sql presente
+4. Caricate il sito su un web server (anche in locale)
+5. Navigate sul sito e divertitevi
