@@ -1,0 +1,47 @@
+.titolo_errore
+{
+    font-family: "Alternate Gothic Condensed", Sans-serif !important;
+    font-weight: 800 !important; color: red !important;
+}
+
+.titolo_successo
+{
+    font-family: "Alternate Gothic Condensed", Sans-serif !important;
+    font-weight: 800 !important; color: green !important;
+}
+
+.titolo_domanda
+{
+    font-family: "Alternate Gothic Condensed", Sans-serif !important;
+    font-weight: 800 !important; color: gray !important;
+}
+
+.titolo_warning
+{
+    font-family: "Alternate Gothic Condensed", Sans-serif !important;
+    font-weight: 800 !important; color: orange !important;
+}
+
+.testo_errore
+{
+    font-family: "Alternate Gothic Condensed", Sans-serif !important;
+    font-weight: 800 !important; color: red !important; margin: 0 0 0 0 !important;
+}
+
+.testo_successo
+{
+    font-family: "Alternate Gothic Condensed", Sans-serif !important;
+    font-weight: 800 !important; color: green !important; margin: 0 0 0 0 !important;
+}
+
+.testo_domanda
+{
+    font-family: "Alternate Gothic Condensed", Sans-serif !important;
+    font-weight: 800 !important; color: gray !important;
+}
+
+.testo_warning
+{
+    font-family: "Alternate Gothic Condensed", Sans-serif !important;
+    font-weight: 800 !important; color: orange !important;
+}

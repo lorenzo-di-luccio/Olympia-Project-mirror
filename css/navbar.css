@@ -1,0 +1,32 @@
+header
+{
+    font-family: "Alternate Gothic Condensed", Sans-serif; font-weight: 800;
+}
+
+.bg-dark
+{
+    background-color: black !important;
+}
+
+.dropdown-menu
+{
+    color: black; background-color: red;
+}
+
+.dropdown-item
+{
+    color: black; background-color: red;
+    font-family: "Alternate Gothic Condensed", Sans-serif; font-weight: 800;
+}
+
+.dropdown-item:hover
+{
+    color: white; background-color: blue;
+    font-family: "Alternate Gothic Condensed", Sans-serif; font-weight: 800;
+}
+
+#logo-navbar
+{
+    height: 25px;
+    width: 100px;
+}

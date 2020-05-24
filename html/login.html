@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympia | Login</title>
+    <link type="text/css" rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../vendor/fontawesome/css/all.min.css">
+    <link type="text/css" rel="stylesheet" href="../css/navbar.css">
+    <link type="text/css" rel="stylesheet" href="../css/footer.css">
+    <link type="text/css" rel="stylesheet" href="../css/login.css">
+    <link type="text/css" rel="stylesheet" href="../css/swal.css">
+    <script type="text/javascript" src="../vendor/jquery/jquery-3.4.1.slim.min.js"></script>
+    <script type="text/javascript" src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../vendor/fontawesome/js/all.min.js"></script>
+    <script type="text/javascript" src="../vendor/sweetalert2/sweetalert2.min.js"></script>
+    <script type="text/javascript" src="../js/navbar.js"></script>
+    <script type="text/javascript" src="../js/footer.js"></script>
+    <script type="text/javascript" src="../js/login.js"></script>
+    <script type="text/javascript" src="../js/session_storage.js"></script>
+</head>
+<body onload="creaNavbar(); impostaVoci(); azionaVocePrincipale('UTENTE');">
+    <header></header>
+    <main>
+<script type="text/javascript">
+    if (typeof sessionStorage["loggato"] != "undefined" && sessionStorage["loggato"] == "t")
+        Swal.fire({
+            customClass: {
+                title: "titolo_errore", content: "testo_errore",
+            }, icon: "error", title: "SEI GIA' LOGGATO...", html: "Effettua il logout."
+        }).then(function() {
+            window.location.replace("../html/index.html");
+        });
+</script>
+        <h1 class="text-center">LOGIN</h1>
+        <div class="container" id="div_form">
+            <form action="../php/login.php" method="post" id="form_login">
+                <div class="form-row">
+                    <div class="form-group col-md" id="div_username">
+                        <label for="username" id="label_username">USERNAME</label>
+                        <input type="text" class="form-control is-invalid" id="username" name="username" onchange="return controllaUsername();">
+                        <div class="invalid-feedback">INSERISCI IL TUO USERNAME.</div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md" id="div_password">
+                        <label for="password" id="label_password">PASSWORD</label>
+                        <input type="password" class="form-control is-invalid" id="password" name="password" onchange="return controllaPassword();">
+                        <div class="invalid-feedback">INSERISCI LA TUA PASSWORD.</div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md" id="div_bottone_entra">
+                        <button type="submit" id="bottone_entra" name="bottone_entra" class="btn btn-outline-light form-control">Entra</button>
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <div class="col-md">
+                    <p>Non sei iscritto? <a href="../html/iscrizione.html">Iscriviti ora</a>!</p>
+                </div>
+            </div>
+        </div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        creaFooter();
+        $("#form_login").on("submit", function() {
+            return validaForm();
+        });
+    });
+</script>
+    </main>
+</body>
+</html>

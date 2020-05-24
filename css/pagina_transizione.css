@@ -1,0 +1,17 @@
+h1
+{
+    padding-top: 70px; font-family: "Alternate Gothic Condensed", Sans-serif; font-weight: 800;
+    color: white;
+}
+
+h5
+{
+    padding-top: 7%; padding-bottom: 7%; font-family: "Alternate Gothic Condensed", Sans-serif;
+    font-weight: 800; color: white;
+}
+
+main
+{
+    min-height: 100vh; background-image: url("../img/froning.jpg"); background-size: cover;
+    background-attachment: fixed;
+}

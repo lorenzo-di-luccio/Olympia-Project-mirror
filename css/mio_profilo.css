@@ -1,0 +1,59 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
+h1
+{
+    padding-top: 70px; padding-bottom: 10px;
+    font-family: "Alternate Gothic Condensed", Sans-serif; font-weight: 800;
+    color: white;
+}
+
+main
+{
+    min-height: 100vh; background-image: url("../img/froning.jpg"); background-size: cover;
+    background-position-x: center; background-attachment: fixed;
+}
+
+#div_bottoni
+{
+    padding-bottom: 60px;
+}
+
+.table-bordered td, .table-bordered th
+{
+    border: 2px solid red;
+}
+
+.table .thead-light th
+{
+    color: white; background-color: blue; border-color: red;
+}
+
+.btn-outline-success
+{
+    font-family: "Alternate Gothic Condensed", Sans-serif; font-weight: 800;
+    color: green; border-color: green; margin-left: 2px; margin-right: 2px;
+}
+
+.btn-outline-success:hover
+{
+    color: white; background-color: green; border-color: green;
+}
+
+.btn-outline-danger
+{
+    font-family: "Alternate Gothic Condensed", Sans-serif; font-weight: 800;
+    color: red; border-color: red; margin-left: 2px; margin-right: 2px;
+}
+
+.btn-outline-danger:hover
+{
+    color: white; background-color: red; border-color: red;
+}
+
+.div_bottoni
+{
+    padding-bottom: 150px;
+}

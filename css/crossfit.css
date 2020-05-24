@@ -1,0 +1,149 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
+a, a:hover
+{
+    text-decoration: none;
+}
+
+.crossfit
+{
+    padding-top: 230px; background-color: white;
+}
+
+.fototesto
+{
+    padding: 50px 0; overflow: hidden ; position: relative;
+}
+
+.fototesto .container
+{
+    width: 100%; max-width: 1200px; margin: 0 auto; padding-top: 130px;
+}
+
+.fototesto .sinistra, .fototesto .destra
+{
+    width: 95%;
+}
+
+.sinistra , .destra
+{
+    width: 100%; max-width: 750px; 
+}
+
+.fototesto h1
+{
+    font-size: 20px; line-height: 25px; letter-spacing: 4px; color: #ff0000;
+}
+
+.fototesto p
+{
+    font-size: 15px; margin-top: 10px; font-weight: 300; letter-spacing: 2px; font-size: 18px; color: black; line-height: 32px;
+}
+
+strong
+{
+    font-weight: bold !important;
+}
+
+.clearfloat
+{
+    clear: both; display: block;
+}
+
+.imgdestra
+{
+    position: absolute; top: 0; right: 0; width: auto; height: 80%;
+}
+
+.bottone
+{
+    border-radius: 0; border: none; background-color: #ff0000; color: white;
+    font-size: 15px; letter-spacing: 2px; font-family: "Alternate Gothic Condensed", Sans-serif;
+}
+
+.bottone-bianco
+{
+    border-radius: 0; border: none; background-color: white; color: #ff0000;
+    font-size: 15px; letter-spacing: 2px; font-family: "Alternate Gothic Condensed", Sans-serif;
+}
+
+.bottone:hover
+{
+    background-color: #ff0000; color: blue; font-size: 20px;
+}
+
+.bottone-bianco:hover
+{
+    background-color: white; color: blue; font-size: 20px;
+}
+
+.fototesto.basi
+{
+    background-color: #ca0000;
+}
+
+.fototesto.basi.nero
+{
+    padding-bottom: 100px;
+}
+
+.fototesto.nero h1, .fototesto.nero h2, .fototesto.nero p
+{
+    color: white;
+}
+
+.imgsinistra
+{
+    position: absolute; top: 0; left: 0; width: auto; height: 80% ; background-color: transparent;
+}
+
+.fototesto .destra
+{
+    float: right; 
+}
+
+.blog-footer
+{
+    padding: 2.5rem 0; color: #ededed; text-align: center; background-color: #050505; border-top: .05rem solid #050505;
+}
+
+.p2
+{
+    padding-left: 100px;
+}
+  
+.p1 a
+{
+    color: #ff0000;
+}
+  
+.p2 a
+{
+    color: #ff0000;
+}
+
+.padd
+{
+    padding-left: 80px;
+}
+
+@media (max-width: 1024px)
+{
+   .imgdestra,.imgsinistra
+   {
+        display : none;
+   }
+}
+
+  
+
+
+
+
+
+
+
+

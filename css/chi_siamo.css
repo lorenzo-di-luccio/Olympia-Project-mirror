@@ -1,0 +1,152 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
+.container-freccetta span
+{
+    display: inline-block; height: 60px; width: 60px;
+    background: url("../img/freccetta.svg") no-repeat center center; background-size: 100%; 
+}
+
+.container-freccetta:hover
+{
+    color: #ff0000;
+}
+
+section.contatt
+{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/bg_contatti.png);
+    background-size: cover; background-position-x: center; background-attachment: fixed;
+    padding-top: 130px; padding-bottom: 125px;
+}
+
+#div-bottone
+{
+    padding-bottom: 20px;
+}
+
+.fototesto
+{
+    padding: 50px 0; width: 100%; padding: 100px 0; overflow: hidden; display: block;
+}
+
+.fototesto .container
+{
+    width: 100%; max-width: 1200px; margin: 0 auto;
+}
+
+.fototesto .sinistra
+{
+    width: 95%;
+}
+
+.sinistra
+{
+    width: 100%; max-width: 750px; position: relative;
+}
+
+.titolo
+{
+    font-size: 36px; color: white; font-weight: 300; letter-spacing: 8px;
+}
+
+.testo
+{
+    color: white;
+}
+
+.fototesto p
+{
+    font-size: 15px; margin-top: 10px; font-weight: 300; letter-spacing: 2px; font-size: 18px;
+    line-height: 32px;
+}
+
+strong
+{
+    font-weight: bold !important;
+}
+
+.telefono
+{
+    position: relative; text-indent: 60px; color: white; padding-bottom: 20px;
+}
+
+.telefono:before
+{
+    content: ''; width: 42px; height: 40px; display: block; top: 0px; left: 0px;
+    background-image: url(../img/telefono_icon.png); background-size: contain;
+    background-position: 10px; background-repeat: no-repeat; position: absolute;
+}
+
+.mailbox
+{
+    position: relative; text-indent: 60px; color: white; padding-bottom: 20px;
+}
+
+.mailbox:before
+{
+    content: ''; width: 42px; height: 40px; display: block; top: 0px; left: 0px;
+    background-image: url(../img/mailbox_icon.png); background-size: 42px 40px;
+    position: absolute;
+}
+
+.bottone
+{
+    width: 223px; height: 43px; margin: 15px auto; background-color: #ff0000; color: white;
+    line-height: 33px; border: 1px solid #ff0000; font-size: 12px; text-align: center;
+    display: block; letter-spacing: 2px; text-transform: uppercase; cursor: pointer;
+    font-family: "Alternate Gothic Condensed", Sans-serif; position: relative; text-decoration: none;
+}
+
+.bottone:hover
+{
+    color: blue; font-size: large; font-family: "Alternate Gothic Condensed", Sans-serif;
+}
+
+.p2
+{
+    padding-left: 100px;
+}
+
+.p1 a
+{
+    color: #ff0000;
+}
+
+.p2 a
+{
+    color: #ff0000;
+}
+
+#logo1
+{
+    height: 43px; width: 200px;
+}
+
+#rotazione180:hover
+{
+    transform: rotateY(180deg); transition: transform 1s; transform-style: preserve-3d; backface-visibility: hidden; cursor: pointer;
+}
+
+.stile-team
+{
+   color: #ff0000; font-family: "Alternate Gothic Condensed", Sans-serif;
+   font-weight: 800; font-size: x-large; padding-bottom: 40px;
+}
+
+.dim-foto
+{
+    height: 100px; width: 100px;
+}
+
+.big-padding
+{
+   padding-top: 30px;padding-bottom: 20px;
+}
+
+#sapienza
+{
+    color: blue; font-family: "Alternate Gothic Condensed", Sans-serif;
+    font-weight: 10; padding-bottom: 80px;
+}

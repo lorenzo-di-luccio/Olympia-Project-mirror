@@ -1,0 +1,155 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
+h3
+{
+    font-family: "Alternate Gothic Condensed", Sans-serif; font-weight: 800; color: red;
+}
+
+iframe
+{
+    width: 75%; height: 200%; border: none; padding-top: 20px;
+}
+
+a
+{
+    color: #ff0000;
+}
+
+#div-bottone-offertona
+{
+    padding-top: 40px;
+}
+
+#div-bottone-prenota-ora
+{
+    padding-bottom: 40px;
+}
+
+#HOME_ .container-fluid .row
+{
+    padding-top: 200px;
+}
+
+#CORSI_
+{
+    padding-top: 70px; padding-bottom: 20px;
+}
+
+#ORARIO_
+{
+    padding-top: 70px; padding-bottom: 20px;
+}
+
+#DOVE_SIAMO
+{
+    padding-top: 10px;
+}
+
+.pseudo-carousel
+{
+    padding-top: 130px; margin-top: 55px; height: 100vh;
+    background-image: url("../img/111.jpg"); background-size: cover;
+    background-position: center center; background-attachment: fixed;
+}
+
+.col-md.text-center
+{
+    padding-top: 220px;
+}
+
+.container-freccetta span
+{
+    display: inline-block; height: 60px; width: 60px;
+    background: url("../img/freccetta.svg") no-repeat center center; background-size: 100%; 
+}
+
+.card
+{
+    border: 2px solid blue;
+}
+
+.card-img-top
+{
+    height: 250px;
+}
+
+.card-title
+{
+    font-family: 'Dosis', sans-serif; font-weight: 600; font-size: 20px; line-height: 25px;
+    letter-spacing: 4px; color: #ff0000;
+}
+
+.card-text
+{
+    font-family: 'Dosis', sans-serif; font-weight: 200; font-size: 14px; line-height: 25px;
+    letter-spacing: 2px; color: black;
+}
+
+a[href="../html/crossfit"]
+{
+    text-decoration: none;
+}
+
+.bottone-home
+{
+    color: blue; background-color: transparent; border-color: #050505;
+    border-radius: 0; border-width: 4px; font-weight: 600; font-size: 20px;
+}
+  
+.bottone-home:hover
+{
+    color: blue; background-color: #ff0000; border-color: #050505;
+}
+
+.container.table-responsive
+{
+    padding-bottom: 30px;
+}
+
+table
+{
+    font-family: "Alternate Gothic Condensed", Sans-serif; font-weight: 800;
+}
+
+.table .thead-dark th
+{
+    border: none; padding: 20px;
+}
+
+#tbody-dark th
+{
+    border: none; padding: 20px;
+}
+
+table .thead-dark .header
+{
+    background-color: blue;
+}
+
+#tbody-dark .header
+{
+    background-color: blue;
+}
+
+#tbody-dark .riga-pari
+{
+    background-color: #050505;
+}
+
+#tbody-dark .riga-dispari
+{
+    background-color: #ff0000;
+}
+
+#container-mappa
+{
+    background-color: black; padding-bottom: 110px;
+}
+
+#container-mappa .row .col-md.text-center
+{
+    padding-top: 20px; padding-bottom: 185px;
+}

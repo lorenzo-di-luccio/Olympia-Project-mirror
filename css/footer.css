@@ -1,0 +1,22 @@
+.blog-footer
+{
+    font-family: "Alternate Gothic Condensed", Sans-serif; font-weight: 800;
+    padding: 5px 0 !important; color: #ededed; text-align: center;
+    background-color: black !important; border-top: .05rem solid black !important;
+}
+
+.link-footer
+{
+    color: red;
+}
+
+.link-footer:hover
+{
+    color: blue;
+    text-decoration: none;
+}
+
+.col-md.text-center
+{
+    padding-top: 0 !important;
+}

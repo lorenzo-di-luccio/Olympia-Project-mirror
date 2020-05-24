@@ -1,0 +1,185 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
+h1
+{
+    font-family: "Alternate Gothic Condensed", Sans-serif; font-weight: 800; color: white;
+    padding-top: 10px;
+}
+
+h5
+{
+    font-family: "Alternate Gothic Condensed", Sans-serif; font-weight: 800;
+}
+
+h6
+{
+    font-family: "Alternate Gothic Condensed", Sans-serif; font-weight: 600;
+}
+
+main
+{
+    min-height: 100vh;
+    background-image: url("../img/froning.jpg"); background-size: cover;
+    background-position-x: center; background-attachment: fixed;
+}
+
+#navbar_gestione
+{
+    margin-top: 55px;
+}
+
+#contenuto_navbar_gestione
+{
+    height: 100%;
+    position: relative;
+}
+
+#navbar_gestione .nav-pills .nav-link
+{
+    color: black; background-color: white;
+}
+
+#navbar_gestione .nav-pills .nav-link.active,
+#navbar_gestione .nav-pills .show > .nav-link
+{
+    color: blue; background-color: red;
+}
+
+.bg-light
+{
+    background-color:white !important;
+    font-family: "Alternate Gothic Condensed", Sans-serif; font-weight: 800;
+}
+
+.d-block
+{
+    font-family: "Alternate Gothic Condensed", Sans-serif; font-weight: 600;
+}
+
+.table-bordered td, .table-bordered th
+{
+    border: 2px solid red;
+}
+
+.table .thead-light th
+{
+    color: white; background-color: blue; border-color: red;
+}
+
+.btn-outline-success
+{
+    font-family: "Alternate Gothic Condensed", Sans-serif; font-weight: 800;
+    color: green; border-color: green; margin-left: 2px; margin-right: 2px;
+}
+
+.btn-outline-success:hover
+{
+    color: white; background-color: green; border-color: green;
+}
+
+.btn-outline-danger
+{
+    font-family: "Alternate Gothic Condensed", Sans-serif; font-weight: 800;
+    color: red; border-color: red; margin-left: 2px; margin-right: 2px;
+}
+
+.btn-outline-danger:hover
+{
+    color: white; background-color: red; border-color: red;
+}
+
+.bottone_approva
+{
+    padding: 0; margin: 0;
+}
+
+.bottone_rifiuta
+{
+    padding: 0; margin: 0;
+}
+
+.fa-check-circle
+{
+    color: green;
+}
+
+.fa-check-circle:hover
+{
+    color: white; background-color: green;
+}
+
+.fa-times-circle
+{
+    color: red;
+}
+
+.fa-times-circle:hover
+{
+    color: white; background-color: red;
+}
+
+.div_filtro
+{
+    padding-top: 10px; padding-bottom: 20px;
+    font-family: "Alternate Gothic Condensed", Sans-serif; font-weight: 800
+}
+
+.label_filtro
+{
+    font-weight: 800; color: white;
+}
+
+.custom-select
+{
+    width: fit-content;
+}
+
+#div_socio_approvazioni, #div_socio_abbonamenti, #div_socio_vendite, #div_aggiornamento_prodotti
+{
+    padding-bottom: 80px;
+}
+
+#socio_approvazioni, #socio_abbonamenti, #socio_vendite, #aggiornamento_prodotti,
+#socio_approvazioni option, #socio_abbonamenti option, #socio_vendite option,
+#aggiornamento_prodotti option
+{
+    font-weight: 800;
+}
+
+.bottone_vendi
+{
+    padding: 0; margin: 0;
+}
+
+.bottone_recedi
+{
+    padding: 0; margin: 0;
+}
+
+.bottone_aggiungi
+{
+    padding: 0; margin: 0;
+}
+
+.bottone_rimuovi
+{
+    padding: 0; margin: 0;
+}
+
+.bottone_cambia
+{
+    padding: 0; margin: 0;
+}
+
+.bottone_reset
+{
+    padding: 0; margin: 0;
+}
+
+.div_bottoni
+{
+    padding-bottom: 150px;
+}

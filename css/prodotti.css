@@ -1,0 +1,96 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
+a
+{
+    color: #8CDA3F;
+}
+
+#logo1
+{
+    height: 400px; width: 380px;
+}
+
+.row1
+{
+    height: 600px; width: 1000px;
+}
+
+.col1
+{
+    padding-right: 200px;
+}
+
+.sfondo
+{
+    background-color: white
+}
+
+.pseudo-carousel
+{
+    padding-top: 70px;
+    background-image: url("../img/sfondo_shop.jpg"); background-attachment: fixed;
+    background-position: center center;
+}
+
+.container-freccetta span
+{
+    display: inline-block; height: 60px; width: 60px;
+    background: url("../img/freccetta.svg") no-repeat center center; background-size: 100%; 
+}
+
+.carousel-caption
+{
+    padding-bottom: 350px;  
+}
+
+.stile-scritta
+{
+    font-family: "Alternate Gothic Condensed", Sans-serif; font-weight: 800;
+    font-size: 60px; color: #8CDA3F;
+}
+
+.stile-scritta2
+{
+    padding-top: 60px; padding-bottom: 50px; font-size: 2.5rem; color: #8CDA3F;
+    font-family: "Alternate Gothic Condensed", Sans-serif; font-weight: 800;
+}
+
+.stile-scritta3
+{
+    font-size: 15px; color: #8CDA3F; font-family: "Alternate Gothic Condensed", Sans-serif;
+    font-weight: 600;
+}
+
+#logo2
+{
+    height: 260px; width: 250px; border-width: 10px; border-color: rgb(140, 218, 63);
+}
+
+#logo3
+{
+    height: 160px; width: 150px; border-width: 10px; border-color: rgb(140, 218, 63);
+}
+
+.btn
+{
+    color:#8CDA3F; background-color: transparent; border-color: #8CDA3F; border-radius: 0;
+    border-width: 4px;
+}
+  
+.btn:hover
+{
+    color:#fff; background-color: #8CDA3F; border-color:#8CDA3F;
+}
+
+.padding-btn
+{
+    padding-top: 20px;
+}
+
+#vet2
+{
+    padding-bottom: 100px;
+}

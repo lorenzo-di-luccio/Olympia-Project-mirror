@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympia | Iscrizione</title>
+    <link type="text/css" rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../vendor/fontawesome/css/all.min.css">
+    <link type="text/css" rel="stylesheet" href="../css/navbar.css">
+    <link type="text/css" rel="stylesheet" href="../css/footer.css">
+    <link type="text/css" rel="stylesheet" href="../css/iscrizione.css">
+    <link type="text/css" rel="stylesheet" href="../css/swal.css">
+    <script type="text/javascript" src="../vendor/jquery/jquery-3.4.1.slim.min.js"></script>
+    <script type="text/javascript" src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../vendor/fontawesome/js/all.min.js"></script>
+    <script type="text/javascript" src="../vendor/sweetalert2/sweetalert2.min.js"></script>
+    <script type="text/javascript" src="../js/navbar.js"></script>
+    <script type="text/javascript" src="../js/footer.js"></script>
+    <script type="text/javascript" src="../js/iscrizione.js"></script>
+</head>
+<body onload="creaNavbar(); impostaVoci(); azionaVocePrincipale('ISCRIZIONE');">
+    <header></header>
+    <main>
+<script type="text/javascript">
+    if (typeof sessionStorage["loggato"] != "undefined" && sessionStorage["loggato"] == "t")
+        Swal.fire({
+            customClass: {
+                title: "titolo_errore", content: "testo_errore",
+            }, icon: "error", title: "SEI LOGGATO...", html: "Sei già iscritto..."
+        }).then(function() {
+            window.location.replace("../html/index.html");
+        });
+</script>
+        <h1 class="text-center" id="titolo">ISCRIZIONE</h1>
+        <div class="container" id="div_form">
+            <form action="../php/iscrizione.php" method="POST" id="form_iscrizione">
+                <div class="form-row">
+                    <div class="form-group col-md" id="div_nome">
+                        <label for="nome">NOME</label>
+                        <input type="text" class="form-control is-invalid" id="nome" name="nome" onchange="return controllaNome();">
+                        <div class="invalid-feedback">INSERISCI IL TUO NOME.</div>
+                    </div>
+                    <div class="form-group col-md" id="div_cognome">
+                        <label for="cognome">COGNOME</label>
+                        <input type="text" class="form-control is-invalid" id="cognome" name="cognome" onchange="return controllaCognome();">
+                        <div class="invalid-feedback">INSERISCI IL TUO COGNOME.</div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md" id="div_data_nascita">
+                        <label for="data_nascita">DATA DI NASCITA</label>
+                        <input type="date" class="form-control is-invalid" id="data_nascita" name="data_nascita" onchange="return controllaDataDiNascita();">
+                        <div class="invalid-feedback">INSERISCI LA TUA DATA DI NASCITA.</div>
+                    </div>
+                    <div class="form-group col-md" id="div_sesso">
+                        <label for="sesso">SESSO</label>
+                        <br>
+                        <div class="form-check-inline" id="div_maschio">
+                            <label for="maschio" class="form-check-label">M</label>
+                            <input type="radio" class="form-check-input" name="sesso" id="maschio" value="M" checked>
+                        </div>
+                        <div class="form-check-inline" id="div_femmina">
+                            <label for="femmina" class="form-check-label">F</label>
+                            <input type="radio" class="form-check-input" name="sesso" id="femmina" value="F">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md" id="div_email">
+                        <label for="email">EMAIL</label>
+                        <input type="email" class="form-control is-invalid" id="email" name="email" onchange="return controllaEmail();">
+                        <div class="invalid-feedback">INSERISCI LA TUA EMAIL.</div>
+                    </div>
+                    <div class="form-group col-md" id="div_username">
+                        <label for="username">USERNAME</label>
+                        <input type="text" class="form-control is-invalid" id="username" name="username" onchange="return controllaUsername();">
+                        <div class="invalid-feedback">SCEGLI IL TUO USERNAME.</div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md" id="div_password">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" class="form-control is-invalid" id="password" name="password" onchange="return controllaPassword(); return controllaConfermaPassword();">
+                        <div class="invalid-feedback">SCEGLI LA TUA PASSWORD.</div>
+                    </div>
+                    <div class="form-group col-md" id="div_conferma_password">
+                        <label for="conferma_password">CONFERMA PASSWORD</label>
+                        <input type="password" class="form-control" id="conferma_password" onchange="return controllaPassword();">
+                        <div class="invalid-feedback">LE PASSWORD NON CORRISPONDONO.</div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col" id="div_abbonamento">
+                        <label for="abbonamento">ABBONAMENTO</label>
+                        <select id="abbonamento" class="custom-select" name="abbonamento">
+                            <option value="*" selected>*</option>
+                            <option value="Crossfit">Crossfit</option>
+                            <option value="Bodybuilding">Bodybuilding</option>
+                            <option value="Pesistica">Pesistica</option>
+                            <option value="Crossfit & Bodybuilding">Crossfit & Bodybuilding</option>
+                            <option value="Crossfit & Pesistica">Crossfit & Pesistica</option>
+                            <option value="Bodybuilding & Pesistica">Bodybuilding & Pesistica</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md" id="div_button_iscriviti">
+                        <button type="submit" class="btn btn-outline-light form-control" id="button_iscriviti" name="button_iscriviti">Iscriviti</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        creaFooter();
+        $("#form_iscrizione").on("submit", function(ev) {
+            ev.preventDefault();
+
+            var okForm = validaForm();
+
+            if (! okForm)
+                return false;
+            else
+            {
+                Swal.fire({
+                    customClass: {
+                        title: "titolo_domanda", content: "testo_domanda"
+                    }, showCancelButton: true, icon: "question", title: "ISCRIZIONE",
+                    html: `Sei sicuro di voler procedere iscrivendoti?<br>
+                    Questi sono i dati che hai inserito:<br>
+                    NOME: ` + $("#nome").val() + `<br>
+                    COGNOME: ` + $("#cognome").val() + `<br>
+                    DATA DI NASCITA: ` + $("#data_nascita").val().split("-").reverse().join("/") + `<br>
+                    SESSO: ` + $("input[name=sesso]:checked").val() + `<br>
+                    EMAIL: ` + $("#email").val() + `<br>
+                    USERNAME: ` + $("#username").val() + `<br>
+                    ABBONAMENTO: ` + $("#abbonamento option:selected").val(),
+                    confirmButtonText: "Sì", cancelButtonText: "No"
+                }).then(function (confermato) {
+                    if (confermato.value)
+                        $("#form_iscrizione").off("submit").submit();
+                });
+                return false;
+            }
+        });          
+    });
+</script>
+    </main>
+</body>
+</html>

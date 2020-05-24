@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympia | Chi siamo</title>
+    <link type="text/css" rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../vendor/fontawesome/css/all.min.css">
+    <link type="text/css" rel="stylesheet" href="../css/navbar.css">
+    <link type="text/css" rel="stylesheet" href="../css/footer.css">
+    <link type="text/css" rel="stylesheet" href="../css/chi_siamo.css">
+    <script type="text/javascript" src="../vendor/jquery/jquery-3.4.1.slim.min.js"></script>
+    <script type="text/javascript" src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../vendor/fontawesome/js/all.min.js"></script>
+    <script type="text/javascript" src="../js/navbar.js"></script>
+    <script type="text/javascript" src="../js/footer.js"></script>
+</head>
+
+<body onload="creaNavbar(); impostaVoci(); azionaVocePrincipale('CHI-SIAMO');">
+    <header></header>
+    <main>
+        <section class="fototesto contatt">
+            <div class="container">
+                <div class="sinistra">
+                    <div class="row">
+                        <div class="col-md">
+                            <h3 class="titolo">Volete saperne di più su di noi, sul club e sul nostro metodo?</h3>
+                            <p class="testo">Passate a trovarci! Siamo in <strong>Piazzale Aldo Moro, 5, 00185 Roma RM</strong>. Oppure chiamateci o inviateci una email. Risponderemo con piacere alle vostre domande.</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="telefono">06 49911</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="mailbox">info@olympia.it</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center" id="div-bottone">
+                    <a href="http://virtualtour.uniroma1.it/" target="_blank" class="btn bottone">Dove Siamo</a>
+                </div>
+                <div class="text-center">
+                    <a class="container-freccetta" href="#team">
+                        <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+<!-- Team -->
+        <section class="big-padding" id="team">
+            <h2 class="stile-team text-center">IL TEAM</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md">
+                        <div class="text-center">
+                            <img id="rotazione180" class="mx-auto rounded-circle dim-foto" src="../img/renato.jpg" alt="">
+                            <h4>Renato Giamba</h4>
+                            <p class="text-muted">M: 1816155</p>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="text-center">
+                            <img id="rotazione180" class="mx-auto rounded-circle dim-foto" src="../img/lore.jpg" alt="">
+                            <h4>Lorenzo Di Luccio</h4>
+                            <p class="text-muted">M: 1797569</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md text-center">
+                    <p id="sapienza">
+                        Entrambi studenti, al terzo anno della facoltà di Ingegneria Informatica ed Automatica presso l'università di Roma, La Sapienza.
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+<script type="text/javascript">
+    $(document).ready(function() {
+        creaFooter();
+    });
+</script>
+    </main>
+    </body>
+</html>

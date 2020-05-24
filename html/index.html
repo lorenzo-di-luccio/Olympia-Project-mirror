@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympia | Home page</title>
+    <link type="text/css" rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../vendor/fontawesome/css/all.min.css">
+    <link type="text/css" rel="stylesheet" href="../css/navbar.css">
+    <link type="text/css" rel="stylesheet" href="../css/footer.css">
+    <link type="text/css" rel="stylesheet" href="../css/index.css">
+    <link type="text/css" rel="stylesheet" href="../css/swal.css">
+    <script type="text/javascript" src="../vendor/jquery/jquery-3.4.1.slim.min.js"></script>
+    <script type="text/javascript" src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../vendor/fontawesome/js/all.min.js"></script>
+    <script type="text/javascript" src="../vendor/sweetalert2/sweetalert2.min.js"></script>
+    <script type="text/javascript" src="../js/navbar.js"></script>
+    <script type="text/javascript" src="../js/footer.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/session_storage.js"></script>
+</head>
+<body onload="azionaResetSessione(); caricaSessionStorage(); creaNavbar(); impostaVoci(); azionaVocePrincipale('HOME');">
+    <header></header>
+    <main>
+        <section class="pseudo-carousel" id="HOME_">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md text-center">
+                        <a class="container-freccetta" href="#CORSI_">
+                            <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container text-center" id="div-bottone-offertona">
+            <button type="button" class="btn btn-outline-dark bt-lg bottone-home" data-toggle="modal" data-target="#overlay">OFFERTONA</button>
+        </div>
+        <h3 class="text-center" id="CORSI_">CORSI</h3>
+        <div class="container">
+            <div class="card-deck">
+                <div class="card" id="card-crossfit">
+                    <img src="../img/kettlebell.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">CROSSFIT</h5>
+                        <p class="card-text">
+                            Il CrossFit si basa sulla varietà degli esercizi, alta intensità, movimenti funzionali.
+                            L'Olympia Club si dedica completamente a voi e al vostro benessere, un luogo dove poter praticare CrossFit secondo un metodo
+                            che non prevede semplici allenamenti, ma il raggiungimento del vostro benessere psicofisico. Il CrossFit viene promosso sia come
+                            una filosofia dell'esercizio fisico, ma anche come uno sport agonistico di fitness; gli allenamenti di CrossFit sono ad alta
+                            intensità e ad intervalli e prevedono sollevamento pesi olimpico, pliometria, powerlifting, ginnastica, sollevamento kettlebell,
+                            ginnastica ritmica, strongman e altri esercizi.
+                        </p>
+                        <a class="btn btn-outline-dark bt-lg bottone-home" href="../html/crossfit.html">SCOPRI DI PIU'</a>
+                    </div>
+                </div>
+                <div class="card" id="card-bodybuilding">
+                    <img src="../img/imm3.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">BODYBUILDING</h5>
+                        <p class="card-text">
+                            Il bodybuilding consiste nell'uso di esercizi di resistenza progressiva per controllare e sviluppare la propria muscolatura a fini estetici.
+                            Un individuo che si impegna in questa attività viene definito culturista. Nel bodybuilding competitivo, i bodybuilder compaiono in formazioni
+                            ed eseguono pose specifiche (e in seguito routine individuali di posa) per una giuria che classifica i concorrenti in base a criteri come simmetria,
+                            muscolosità, dimensioni, condizionamento, posa e presentazione sul palco. I culturisti si preparano per le competizioni attraverso l'eliminazione
+                            del grasso corporeo non essenziale, potenziato nell'ultima fase da una combinazione di disidratazione extracellulare e carico di carboidrati, per
+                            ottenere la massima definizione muscolare e vascolarizzazione, nonché abbronzatura e rasatura per accentuare il contrasto della pelle sotto i riflettori.
+                        </p>
+                    </div>
+                </div>
+                <div class="card" id="card-pesistica">
+                    <img src="../img/imm1.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">PESISTICA OLIMPIONICA</h5>
+                        <p class="card-text">
+                            Le gare di sollevamento pesi sono diffuse sin dai tempi antichi (sembra che fossero incluse nei giochi delle Olimpiadi antiche) e hanno sempre
+                            fatto parte del programma dei primi Giochi olimpici moderni fin dalla prima edizione del 1896. Dagli anni cinquanta agli anni ottanta, molti
+                            sollevatori di successo arrivavano dall'Europa orientale, specialmente da Bulgaria, Romania, Polonia e Unione Sovietica. Da allora, sollevatori
+                            provenienti da Cina, Grecia e Turchia hanno dominato questa disciplina e le nazioni con i migliori atleti ai Giochi Olimpici sono Russia,
+                            Bulgaria e Cina. Il sollevamento pesi femminile ha incominciato a diffondersi negli anni ottanta ed è stato aggiunto al programma olimpico nel
+                            2000.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3 class="text-center" id="ORARIO_">ORARIO</h3>
+        <div class="container table-responsive">
+                <table class="table table-bordless table-dark table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th class="header" scope="col">Orari</th>
+                            <th class="header" scope="col">Lunedì</th>
+                            <th class="header" scope="col">Martedì</th>
+                            <th class="header" scope="col">Mercoledì</th>
+                            <th class="header" scope="col">Giovedì</th>
+                            <th class="header" scope="col">Venerdì</th>
+                            <th class="header" scope="col">Sabato</th>
+                            <th class="header" scope="col">Domenica</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody-dark">
+                        <tr>
+                            <th class="riga-dispari" scope="col">09:00 - 10:30</th>
+                            <th class="riga-dispari" scope="col">Pesistica</th>
+                            <th class="riga-dispari" scope="col">Pesistica</th>
+                            <th class="riga-dispari" scope="col">Pesistica</th>
+                            <th class="riga-dispari" scope="col">Pesistica</th>
+                            <th class="riga-dispari" scope="col">Pesistica</th>
+                            <th class="riga-dispari" scope="col">Pesistica</th>
+                            <th class="riga-dispari" scope="col">REST</th>
+                        </tr>
+                        <tr>
+                            <th class="riga-pari" scope="col">10:30 - 11:30</th>
+                            <th class="riga-pari" scope="col">Pesistica</th>
+                            <th class="riga-pari" scope="col">Pesistica</th>
+                            <th class="riga-pari" scope="col">Pesistica</th>
+                            <th class="riga-pari" scope="col">Pesistica</th>
+                            <th class="riga-pari" scope="col">Pesistica</th>
+                            <th class="riga-pari" scope="col">Pesistica</th>
+                            <th class="riga-pari" scope="col">REST</th>
+                        </tr>
+                        <tr>
+                            <th class="riga-dispari" scope="col">11:30 - 16:30</th>
+                            <th class="riga-dispari" scope="col">Bodybuilding</th>
+                            <th class="riga-dispari" scope="col">Bodybuilding</th>
+                            <th class="riga-dispari" scope="col">Bodybuilding</th>
+                            <th class="riga-dispari" scope="col">Bodybuilding</th>
+                            <th class="riga-dispari" scope="col">Bodybuilding</th>
+                            <th class="riga-dispari" scope="col">Bodybuilding</th>
+                            <th class="riga-dispari" scope="col">REST</th>
+                        </tr>
+                        <tr>
+                            <th class="riga-pari" scope="col">16:30 - 18:30</th>
+                            <th class="riga-pari" scope="col">Crossfit C1</th>
+                            <th class="riga-pari" scope="col">Crossfit C1</th>
+                            <th class="riga-pari" scope="col">Crossfit C1</th>
+                            <th class="riga-pari" scope="col">Crossfit C1</th>
+                            <th class="riga-pari" scope="col">Crossfit C1</th>
+                            <th class="riga-pari" scope="col">Crossfit C1</th>
+                            <th class="riga-pari" scope="col">REST</th>
+                        </tr>
+                        <tr>
+                            <th class="riga-dispari" scope="col">18:30 - 19:30</th>
+                            <th class="riga-dispari" scope="col">Crossfit C2</th>
+                            <th class="riga-dispari" scope="col">Crossfit C2</th>
+                            <th class="riga-dispari" scope="col">Crossfit C2</th>
+                            <th class="riga-dispari" scope="col">Crossfit C2</th>
+                            <th class="riga-dispari" scope="col">Crossfit C2</th>
+                            <th class="riga-dispari" scope="col">Crossfit C2</th>
+                            <th class="riga-dispari" scope="col">REST</th>
+                        </tr>
+                        <tr>
+                            <th class="riga-pari" scope="col">19:30 - 20:30</th>
+                            <th class="riga-pari" scope="col">Crossfit C3</th>
+                            <th class="riga-pari" scope="col">Crossfit C3</th>
+                            <th class="riga-pari" scope="col">Crossfit C3</th>
+                            <th class="riga-pari" scope="col">Crossfit C3</th>
+                            <th class="riga-pari" scope="col">Crossfit C3</th>
+                            <th class="riga-pari" scope="col">Crossfit C3</th>
+                            <th class="riga-pari" scope="col">REST</th>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+        <div class="container text-center" id="div-bottone-prenota-ora">
+            <a class="btn btn-outline-dark btn-lg bottone-home" href="../php/prenotazione.php">PRENOTA ORA</a>
+        </div>
+        <div class="container-fluid" id="container-mappa">
+            <div class="row">
+                <div class="col-md">
+                    <h3 class="text-center" id="DOVE_SIAMO">DOVE SIAMO</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md text-center">
+                    <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAX3KqVyVQwqYBf1EbYIjDi0xJaYNc8xbM&q=Sapienza,Roma+RM" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="overlay" style="top:30%;">
+            <div class="modal-dialog">
+                <div class="modal-content" style="height:40vh; background:#ffae00;">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">MESE OMAGGIO&nbsp;<img src="../img/loudspeaker.png"></h4>
+                        <hr>
+                        <p>NON PERDERE L'OCCASIONE!</p>
+                        <p>HAI TEMPO SOLO FINO AL 25 DICEMBRE!&emsp;<img src="../img/xmas.png"></p>
+                        <p>Portando un nuovo amico in palestra subito per te un mese omaggio!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        creaFooter();
+    });
+</script>
+    </main>
+</body>
+</html>

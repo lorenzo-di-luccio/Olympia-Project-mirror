@@ -1,0 +1,83 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
+h1
+{
+    padding-top: 70px; font-family: "Alternate Gothic Condensed", Sans-serif; font-weight: 800;
+    color: white;
+}
+
+main
+{
+    min-height: 100vh; background-image: url("../img/froning.jpg"); background-size: cover;
+    background-position-x: center; background-attachment: fixed;
+}
+
+.table-bordered td, .table-bordered th
+{
+    border: 2px solid red;
+}
+
+.table .thead-light th
+{
+    color: white; background-color: blue; border-color: red;
+}
+
+.btn-outline-danger
+{
+    font-family: "Alternate Gothic Condensed", Sans-serif; font-weight: 800;
+    color: red; border-color: red; margin-left: 2px; margin-right: 2px;
+}
+
+.btn-outline-danger:hover
+{
+    color: white; background-color: red; border-color: red;
+}
+
+.fa-times-circle
+{
+    color: red;
+}
+
+.fa-times-circle:hover
+{
+    color: white; background-color: red;
+}
+
+.bottone_disdici
+{
+    padding: 0; margin: 0;
+}
+
+.div_filtro_corsi
+{
+    padding-top: 10px; padding-bottom: 20px;
+    font-family: "Alternate Gothic Condensed", Sans-serif; font-weight: 800
+}
+
+.label_filtro_corsi
+{
+    font-weight: 800; color: white;
+}
+
+.custom-select
+{
+    width: fit-content;
+}
+
+#div_totale
+{
+    padding-bottom: 80px;
+}
+
+#miei_corsi, #miei_corsi option
+{
+    font-weight: 800;
+}
+
+.div_bottoni
+{
+    padding-bottom: 150px;
+}
