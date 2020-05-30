@@ -1,7 +1,9 @@
+<!--Riprende la sessione PHP iniziata o ne crea una nuova.-->
 <?php
     session_start();
     include "connessione_db.php";
 ?>
+<!---->
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -22,11 +24,15 @@
     <script type="text/javascript" src="../js/footer.js"></script>
     <script type="text/javascript" src="../js/carrello.js"></script>
 </head>
-
 <body onload="creaNavbar(); impostaVoci(); azionaVocePrincipale('SHOP');">
+    <!--Navbar-->
     <header></header>
+    <!---->
     <main>
         <h1 class="text-center">CARRELLO</h1>
+<!--Controlla, in ordine, che ci sia un utente loggato e che l'utente loggato sia un socio. Se
+almeno una delle due condizioni non viene soddisfatta, visualizza un alert con il corrispondente
+messaggio di errore.-->
 <?php
     if (! isset($_SESSION["loggato"]) || ! $_SESSION["loggato"])
     {
@@ -59,11 +65,15 @@
         exit(1);
     }
 ?>
+<!---->
+        <!--Filtro-->
         <div class="container text-center div_filtro_prodotto" id="div_prodotto_acquisti">
             <label for="prodotto_acquisti" class="label_filtro_prodotto" id="label_prodotto_acquisti">Prodotto</label>
             <br>
             <select id="prodotto_acquisti" class="custom-select" onchange="filtraProdottiAcquisti();">
                 <option value="*" selected>*</option>
+<!--Esegue una SELECT sul database chiedendo il nome di tutti i prodotti e li inserisce come
+elementi <option></option> nell'elemento <select></select> corrispondente.-->
 <?php
     $conn = @pg_connect(stringaConnessioneDB());
 
@@ -93,8 +103,12 @@
         @pg_close($conn);
     }
 ?>
+<!----->
             </select>
         </div>
+        <!---->
+<!--Crea la tabella. Esegue una SELECT sul database chiedendo tutti i prodotti acquistati
+dall'utente loggato e li inserisce nella tabella appena creata.-->
 <?php
     echo("
     <div class='container table-responsive' id='div_tabella_elenco'>
@@ -166,6 +180,9 @@
             </div>");
     }
 ?>
+<!---->
+<!--Crea il footer e gestisce l'evento "click" dei bottoni rossi piccoli e del bottone rosso
+grande.-->
 <script type="text/javascript">
     $(document).ready(function() {
         creaFooter();
@@ -208,6 +225,6 @@
         });
     });
 </script>
-    <div></div>
+<!---->
     </main>
 </body>

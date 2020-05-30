@@ -1,3 +1,7 @@
+/**
+ * Filtro. Regola la visibilità delle righe della tabella a seconda della voce selezionata
+ * nell'elemento <select></select> corrispondente.
+ */
 function filtraProdottiAcquisti()
 {
     var prodotto = $("#prodotto_acquisti option:selected").val();

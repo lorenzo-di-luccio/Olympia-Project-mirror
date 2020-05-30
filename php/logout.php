@@ -1,6 +1,9 @@
+<!--Riprende la sessione PHP iniziata o ne crea una nuova.-->
 <?php
     session_start();
 ?>
+<!---->
+<!--PAGINA DI TRANSIZIONE-->
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -23,6 +26,9 @@
     <header></header>
     <main>
         <h1 class="text-center">LOGOUT</h1>
+<!--Controlla che ci sia un utente loggato. Se non c'è, visualizza un alert con il corrispondente
+messaggio di errore. Se non ci sono errori, procede con il logout cancellando tutto il contenuto
+dell'array associativo $_SESSION e rilasciando le risorse della sessione PHP corrente.-->
 <?php
     if (! isset($_SESSION["loggato"]) || ! $_SESSION["loggato"])
     {
@@ -41,12 +47,16 @@
     session_unset();
     session_destroy();
 ?>
+<!---->
+<!--Ripristina il Session Storage ad uno stato coerente non caricato con alcun utente loggato.
+Reindirizza all'home page.-->
 <script type="text/javascript">
     $(document).ready(function() {
         ripristinaSessionStorage();
         window.location.replace("../html/index.html");
     });
 </script>
+<!---->
     </main>
 </body>
 </html>

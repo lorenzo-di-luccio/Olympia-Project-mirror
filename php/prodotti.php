@@ -1,7 +1,9 @@
+<!--Riprende la sessione PHP iniziata o ne crea una nuova.-->
 <?php
     session_start();
     include "connessione_db.php";
 ?>
+<!---->
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -22,10 +24,12 @@
     <script type="text/javascript" src="../js/footer.js"></script>
     <script type="text/javascript" src="../js/prodotti.js"></script>
 </head>
-
 <body onload="creaNavbar(); impostaVoci(); azionaVocePrincipale('SHOP');">
+    <!--Navbar-->
     <header></header>
+    <!---->
     <main>
+        <!--Cover con prodotto-->
         <section>
         <div class="container-fluid pseudo-carousel">
             <div class="row">
@@ -52,7 +56,8 @@
             </div>
         </div>
         </section>
-            
+        <!---->
+        <!--La nostra vetrina-->
         <div class="container-fluid sfondo" id="BOMBE">
             <div class="row big-padding">
                 <div class="container">
@@ -112,7 +117,8 @@
                 </div>
             </div>
         </div>
-
+        <!---->
+        <!--Serie di modal. Uno per ogni prodotto. Sono anche delle form.-->
         <div class="modal fade" id="proteina"  style="top:30%; ">
             <div class="modal-dialog ">
                 <div class="modal-content" style=" background:#20303c;">
@@ -534,6 +540,8 @@
                 </div>
             </div>
         </div>
+        <!---->
+<!--Crea il footer e gestisce l'evento "submit" di ogni modal di prodotto.-->
 <script type="text/javascript">
     $(document).ready(function() {
         creaFooter();
@@ -727,5 +735,6 @@
         });
     });          
 </script>
+<!---->
     </main>
 </body>       

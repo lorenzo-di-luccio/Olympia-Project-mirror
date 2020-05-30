@@ -1,7 +1,9 @@
+<!--Riprende la sessione PHP iniziata o ne crea una nuova.-->
 <?php
     session_start();
     include "connessione_db.php"
 ?>
+<!---->
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -21,11 +23,14 @@
     <script type="text/javascript" src="../js/navbar.js"></script>
     <script type="text/javascript" src="../js/footer.js"></script>
 </head>
-
 <body onload="creaNavbar(); impostaVoci(); azionaVocePrincipale('PRENOTAZIONE');">
+    <!--Navbar-->
     <header></header>
-
+    <!---->
     <main>
+<!--Controlla, in ordine, che ci sia un utente loggato e che l'utente loggato sia un socio. Se
+almeno una delle due condizioni non viene soddisfatta, visualizza un alert con il corrispondente
+messaggio di errore.-->
 <?php
     if (! isset($_SESSION["loggato"]) || ! $_SESSION["loggato"])
     {
@@ -60,7 +65,9 @@
         exit(1);
     }
 ?>
+<!---->
         <h1 class="text-center">PRENOTAZIONE</h1>
+        <!--Tabella-->
         <div class="container table-responsive">
                <table class="table table-bordless table-dark table-striped">
                    <thead class="thead-dark">
@@ -132,7 +139,8 @@
                    </tbody>
                </table>
            </div>
-
+           <!---->
+           <!--Serie di modal. Uno per ogni ora di corso. Sono anche delle form.-->
 <!------------------------------------------------------
                      CROSSFIT1-LUN
 ------------------------------------------------------->
@@ -1686,6 +1694,9 @@
                     </div>
                 </div>
             </div>
+            <!---->
+<!--Crea il footer e imposta delle proprietà CSS con JQuery. Quest'ultima funzionalità è stata
+preferita per compensare la poca modularità.-->
 <script type="text/javascript">
     $(document).ready(function() {
         creaFooter();
@@ -1695,6 +1706,7 @@
         $("input[value=PRENOTA]").addClass("btn btn-outline-light btn-lg bottone-modal");
     });
 </script>
+<!---->
     </main>
 </body>
 </html>

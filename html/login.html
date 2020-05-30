@@ -20,8 +20,12 @@
     <script type="text/javascript" src="../js/session_storage.js"></script>
 </head>
 <body onload="creaNavbar(); impostaVoci(); azionaVocePrincipale('UTENTE');">
+    <!--Navbar-->
     <header></header>
+    <!---->
     <main>
+<!--Controlla che non ci sia un utente già loggato. Se c'è visualizza un alert con un messaggio
+di errore.-->
 <script type="text/javascript">
     if (typeof sessionStorage["loggato"] != "undefined" && sessionStorage["loggato"] == "t")
         Swal.fire({
@@ -33,6 +37,7 @@
         });
 </script>
         <h1 class="text-center">LOGIN</h1>
+        <!--Form di login-->
         <div class="container" id="div_form">
             <form action="../php/login.php" method="post" id="form_login">
                 <div class="form-row">
@@ -61,6 +66,8 @@
                 </div>
             </div>
         </div>
+        <!---->
+<!--Crea il footer e gestisce l'evento "submit" della form.-->
 <script type="text/javascript">
     $(document).ready(function () {
         creaFooter();
@@ -69,6 +76,7 @@
         });
     });
 </script>
+<!---->
     </main>
 </body>
 </html>

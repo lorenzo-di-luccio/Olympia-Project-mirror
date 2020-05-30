@@ -1,7 +1,10 @@
+<!--Riprende la sessione PHP iniziata o ne crea una nuova.-->
 <?php
     session_start();
     include "connessione_db.php"
 ?>
+<!---->
+<!--PAGINA DI TRANSIZIONE-->
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -20,10 +23,19 @@
     <script type="text/javascript" src="../js/navbar.js"></script>
 </head>
 <body onload="creaNavbar(); impostaVoci(); azionaVocePrincipale('ORARIO');">
+    <!--Navbar-->
     <header></header>
+    <!---->
     <main>
         <h1 class="text-center">PRENOTAZIONE</h1>
         <p style="padding-bottom: 100%"></p>
+<!--Controlla, in ordine, che ci sia un utente loggato, che l'utente loggato sia un socio e che la
+pagina sia stata chiamata con il metodo GET o con il metodo POST. Se almeno una delle tre
+condizioni non viene soddisfatta, visualizza un alert con il corrispondente messaggio di errore.
+Se non ci sono errori, procede o con la prenotazione o con la disdetta di una prenotazione ad un
+corso effettuando sul database le operazioni opportune. Se tutto è andato a buon fine, visualizza
+un alert che avverte del successo dell'operazione e che, appena chiuso, reindirizza o alla pagina
+di prenotazione o alla pagina dei miei corsi.-->
 <?php
     if (! isset($_SESSION["loggato"]) || ! $_SESSION["loggato"])
     {
@@ -240,6 +252,7 @@
 </script>");
     }
 ?>
+<!---->
     </main>
 </body>
 </html>

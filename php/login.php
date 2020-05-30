@@ -1,7 +1,10 @@
+<!--Riprende la sessione PHP iniziata o ne crea una nuova.-->
 <?php
     session_start();
     include "connessione_db.php";
 ?>
+<!---->
+<!--PAGINA DI TRANSIZIONE-->
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -21,9 +24,17 @@
     <script type="text/javascript" src="../js/session_storage.js"></script>
 </head>
 <body onload="creaNavbar(); impostaVoci(); azionaVocePrincipale('UTENTE');">
+    <!--Navbar-->
     <header></header>
+    <!---->
     <main>
         <h1 class="text-center">LOGIN</h1>
+<!--Controlla, in ordine, che non ci sia un utente loggato e che la pagina sia stata chiamata con
+il metodo POST. Se almeno una delle due condizioni non viene soddisfatta, visualizza un alert con
+il corrispondente messaggio di errore. Se non ci sono errori, procede con il login effettuando
+due SELECT sul database. Se tutto è andato a buon fine, visualizza un alert che avverte del
+successo dell'operazione e che, appena chiuso, scrive sul Session Storage i dati dell'utente
+loggato reindirizza all'home page.-->
 <?php
     if (isset($_SESSION["loggato"]) && $_SESSION["loggato"])
     {
@@ -104,6 +115,7 @@
     });
 </script>");
 ?>
+<!---->
     </main>
 </body>
 </html>

@@ -1,3 +1,7 @@
+/**
+ * Funzione di utilità. Crea la navbar in tutte le pagine in cui è chiamata mettendola in un
+ * elemento <header></header> già predisposto. Usata per scopi di modularità.
+ */
 function creaNavbar()
 {
     var navbar = document.createElement("nav");
@@ -85,6 +89,10 @@ function creaNavbar()
     document.body.firstElementChild.appendChild(navbar);
 }
 
+/**
+ * Filtro. Regola la visibilità delle voci della navbar a seconda che ci sia o meno un utente
+ * loggato e a seconda che l'utente loggato sia un amministratore o un socio.
+ */
 function impostaVoci()
 {
     if (sessionStorage["loggato"] == "t")
@@ -125,6 +133,10 @@ function impostaVoci()
     }
 }
 
+/**
+ * Evidenzia in modo più evidente la voce della navbar passata come argomento.
+ * @param voce: stringa con l'id della voce della navbar da evidenziare.
+ */
 function azionaVocePrincipale(voce)
 {
     $("#" + voce).addClass("active");

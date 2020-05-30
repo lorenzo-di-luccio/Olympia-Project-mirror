@@ -19,8 +19,12 @@
     <script type="text/javascript" src="../js/iscrizione.js"></script>
 </head>
 <body onload="creaNavbar(); impostaVoci(); azionaVocePrincipale('ISCRIZIONE');">
+    <!--Navbar-->
     <header></header>
+    <!---->
     <main>
+<!--Controlla che non ci sia un utente già loggato. Se c'è, visualizza un alert con un messaggio
+di errore.-->
 <script type="text/javascript">
     if (typeof sessionStorage["loggato"] != "undefined" && sessionStorage["loggato"] == "t")
         Swal.fire({
@@ -31,7 +35,9 @@
             window.location.replace("../html/index.html");
         });
 </script>
+<!---->
         <h1 class="text-center" id="titolo">ISCRIZIONE</h1>
+        <!--Form d'iscrizione-->
         <div class="container" id="div_form">
             <form action="../php/iscrizione.php" method="POST" id="form_iscrizione">
                 <div class="form-row">
@@ -110,6 +116,8 @@
                 </div>
             </form>
         </div>
+        <!---->
+<!--Crea il footer e gestisce l'evento "submit" della form.-->
 <script type="text/javascript">
     $(document).ready(function() {
         creaFooter();
@@ -145,6 +153,7 @@
         });          
     });
 </script>
+<!---->
     </main>
 </body>
 </html>

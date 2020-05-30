@@ -1,3 +1,8 @@
+/**
+ * Filtro. Regola la visibilità delle righe di una tabella in una sezione passata come argomento
+ * a seconda della voce selezionata nell'elemento <select></select> corrispondente.
+ * @param sezione: stringa con l'id della sezione in cui si trova la tabella.
+ */
 function filtraSoci(sezione)
 {
     var socio = $("#socio_" + sezione + " option:selected").val();
@@ -13,16 +18,30 @@ function filtraSoci(sezione)
         });
 }
 
+/**
+ * Funzione di utilità. Regola la visibilità delle righe della tabella nella sezione
+ * "approvazioni" a seconda della voce selezionata nell'elemento <select></select>
+ * corrispondente.
+ */
 function filtraSociApprovazioni()
 {
     filtraSoci("approvazioni");
 }
 
+/**
+ * Funzione di utilità. Regola la visibilità delle righe della tabella nella sezione "vendite" a
+ * seconda della voce selezionata nell'elemento <select></select> corrispondente.
+ */
 function filtraSociVendite()
 {
     filtraSoci("vendite");
 }
 
+/**
+ * Filtro. Regola la visibilità delle righe della tabella nella sezione "cambio abbonamenti" e
+ * anche i vari attributi 'name' per inviare i dati giusti a seconda della voce selezionata
+ * nell'elemento <select></select> corrispondente.
+ */
 function filtraSociAbbonamenti()
 {
     var socio = $("#socio_abbonamenti option:selected").val();
@@ -55,6 +74,10 @@ function filtraSociAbbonamenti()
     }
 }
 
+/**
+ * Filtro. Regola la visibilità delle righe della tabella nella sezione "aggiornamento prodotti"
+ * a seconda della voce selezionata nell'elemento <select></select> corrispondente.
+ */
 function filtraProdottiAggiornamento()
 {
     var prodotto = $("#aggiornamento_prodotti option:selected").val();

@@ -20,8 +20,11 @@
     <script type="text/javascript" src="../js/session_storage.js"></script>
 </head>
 <body onload="azionaResetSessione(); caricaSessionStorage(); creaNavbar(); impostaVoci(); azionaVocePrincipale('HOME');">
+    <!--Navbar-->
     <header></header>
+    <!---->
     <main>
+        <!--Cover del sito-->
         <section class="pseudo-carousel" id="HOME_">
             <div class="container-fluid">
                 <div class="row">
@@ -33,10 +36,12 @@
                 </div>
             </div>
         </section>
+        <!---->
         <div class="container text-center" id="div-bottone-offertona">
             <button type="button" class="btn btn-outline-dark bt-lg bottone-home" data-toggle="modal" data-target="#overlay">OFFERTONA</button>
         </div>
         <h3 class="text-center" id="CORSI_">CORSI</h3>
+        <!--Sezione dei corsi-->
         <div class="container">
             <div class="card-deck">
                 <div class="card" id="card-crossfit">
@@ -84,7 +89,9 @@
                 </div>
             </div>
         </div>
+        <!---->
         <h3 class="text-center" id="ORARIO_">ORARIO</h3>
+        <!--Sezione dell'orario-->
         <div class="container table-responsive">
                 <table class="table table-bordless table-dark table-striped">
                     <thead class="thead-dark">
@@ -163,9 +170,11 @@
                     </tbody>
                 </table>
         </div>
+        <!---->
         <div class="container text-center" id="div-bottone-prenota-ora">
             <a class="btn btn-outline-dark btn-lg bottone-home" href="../php/prenotazione.php">PRENOTA ORA</a>
         </div>
+        <!--Sezione dove siamo con mappa-->
         <div class="container-fluid" id="container-mappa">
             <div class="row">
                 <div class="col-md">
@@ -178,7 +187,8 @@
                 </div>
             </div>
         </div>
-        <!-- Modal -->
+        <!---->
+        <!--Modal dell'offertona-->
         <div class="modal fade" id="overlay" style="top:30%;">
             <div class="modal-dialog">
                 <div class="modal-content" style="height:40vh; background:#ffae00;">
@@ -193,11 +203,14 @@
                 </div>
             </div>
         </div>
+        <!---->
+<!--Crea il footer.-->
 <script type="text/javascript">
     $(document).ready(function() {
         creaFooter();
     });
 </script>
+<!---->
     </main>
 </body>
 </html>

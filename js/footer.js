@@ -1,3 +1,7 @@
+/**
+ * Funzione di utilità. Crea il footer in tutte le pagine in cui è chiamata. Usata per scopi di
+ * modularità.
+ */
 function creaFooter()
 {
     var footer = document.createElement("footer");

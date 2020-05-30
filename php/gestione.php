@@ -1,7 +1,9 @@
+<!--Riprende la sessione PHP iniziata o ne crea una nuova.-->
 <?php
     session_start();
     include "connessione_db.php";
 ?>
+<!---->
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -23,8 +25,13 @@
     <script type="text/javascript" src="../js/gestione.js"></script>
 </head>
 <body onload="creaNavbar(); impostaVoci(); azionaVocePrincipale('GESTIONE');">
+    <!--Navbar-->
     <header></header>
+    <!---->
     <main>
+<!--Controlla, in ordine, che ci sia un utente loggato e che l'utente loggato sia un
+amministratore. Se almeno una delle due condizioni non viene soddisfatta, visualizza un alert con
+il corrispondente messaggio di errore.-->
 <?php
     if (! isset($_SESSION["loggato"]) || ! $_SESSION["loggato"])
     {
@@ -58,6 +65,9 @@
         exit(1);
     }
 ?>
+<!---->
+        <!--Navbar secondaria con le quattro sezioni-tab: "Approvazioni", "Cambio abbonamenti",
+        "Vendite", "Aggiornamento prodotti"-->
         <nav class="navbar navbar-expand-md navbar-light sticky-top bg-light" id="navbar_gestione">
             <ul class="nav nav-pills ml-auto mr-auto" role="tablist">
                 <li class="nav-item">
@@ -74,14 +84,19 @@
                 </li>
             </ul>
         </nav>
+        <!---->
+        <!--Sezione-tab "Approvazioni"-->
         <div class="tab-content" id="contenuto_navbar_gestione" data-spy="scroll" data-target="#navbar_gestione">
             <div class="tab-pane active" id="pane_APPROVAZIONI">
                 <h1 class="text-center" id="APPROVAZIONI">APPROVAZIONI</h1>
+                <!--Filtro-->
                 <div class="container text-center div_filtro" id="div_socio_approvazioni">
                     <label for="socio_approvazioni" class="label_filtro" id="label_socio_approvazioni">Socio</label>
                     <br>
                     <select id="socio_approvazioni" class="custom-select" onchange="filtraSociApprovazioni();">
                         <option value="*" selected>*</option>
+<!--Esegue una SELECT sul database chiedendo l'username di tutti i soci da approvare e li
+inserisce come elementi <option></option> nell'elemento <select></select> corrispondente.-->
 <?php
     $conn = @pg_connect(stringaConnessioneDB());
 
@@ -111,8 +126,12 @@
         @pg_close($conn);
     }
 ?>
+<!---->
                     </select>
                 </div>
+                <!---->
+<!--Crea la tabella. Esegue una SELECT sul database chiedendo tutti i soci da approvare e li
+inserisce nella tabella appena creata.-->
 <?php
     echo("
     <div class='container table-responsive' id='div_approvazioni'>
@@ -193,14 +212,20 @@
         </div>");
     }
 ?>
+<!---->
             </div>
+            <!---->
+            <!--Sezione-tab "Cambio abbonamenti"-->
             <div class="tab-pane" id="pane_CAMBIO_ABBONAMENTI">
                 <h1 class="text-center" id="CAMBIO_ABBONAMENTI">CAMBIO ABBONAMENTI</h1>
+                <!--Filtro-->
                 <div class="container text-center div_filtro" id="div_socio_abbonamenti">
                     <label for="socio_abbonamenti" class="label_filtro" id="label_socio_abbonamenti">Socio</label>
                     <br>
                     <select id="socio_abbonamenti" class="custom-select" onchange="filtraSociAbbonamenti();">
                         <option value="*" selected>*</option>
+<!--Esegue una SELECT sul database chiedendo l'username di tutti i soci e li inserisce come
+elementi <option></option> nell'elemento <select></select> corrispondente.-->
 <?php
     $conn = @pg_connect(stringaConnessioneDB());
 
@@ -230,8 +255,13 @@
         @pg_close($conn);
     }
 ?>
+<!---->
                     </select>
                 </div>
+                <!---->
+<!--Crea la tabella. Esegue una SELECT sul database chiedendo l'username, l'abbonamento e la
+data di scadenza di quest'ultimo dei soci e li inserisce opportunamente insieme ad altri dati
+nella tabella appena creata. Questa tabella è anche una form.-->
 <?php
     echo("
     <form name='form_cambio_abbonamenti' id='form_cambio_abbonamenti' method='POST' action='../php/cambio_abbonamenti.php'>
@@ -330,14 +360,21 @@
     @pg_free_result($ris);
     @pg_close($conn);
 ?>
+<!---->
             </div>
+            <!---->
+            <!--Sezione-tab "Vendite"-->
             <div class="tab-pane" id="pane_VENDITE">
                 <h1 class="text-center" id="VENDITE">VENDITE</h1>
+                <!--Filtro-->
                 <div class="container text-center div_filtro" id="div_socio_vendite">
                     <label for="socio_vendite" class="label_filtro" id="label_socio_vendite">Socio</label>
                     <br>
                     <select id="socio_vendite" class="custom-select" onchange="filtraSociVendite();">
                         <option value="*" selected>*</option>
+<!--Esegue una SELECT sul database chiedendo l'username di tutti i soci che hanno effettuato
+acquisti e li inserisce come elementi <option></option> nell'elemento <select></select>
+corrispondente.-->
 <?php
     $conn = @pg_connect(stringaConnessioneDB());
 
@@ -367,8 +404,12 @@
         @pg_close($conn);
     }
 ?>
+<!---->
                     </select>
                 </div>
+                <!---->
+<!--Crea la tabella. Esegue una SELECT sul database chiedendo tutti gli acquisti effettuati dai
+soci e li inserisce nella tabella appena creata.-->
 <?php
     echo("
     <div class='container table-responsive' id='div_vendite'>
@@ -448,14 +489,20 @@
         </div>");
     }
 ?>
+<!---->
             </div>
+            <!---->
+            <!--Sezione-tab "Aggiornamento prodotti"-->
             <div class="tab-pane" id="pane_AGGIORNAMENTO_PRODOTTI">
                 <h1 class="text-center" id="AGGIORNAMENTO PRODOTTI">AGGIORNAMENTO PRODOTTI</h1>
+                <!--Filtro-->
                 <div class="container text-center div_filtro" id="div_aggiornamento_prodotti">
                     <label for="aggiornamento_prodotti" class="label_filtro" id="label_aggiornamento_prodotti">Prodotto</label>
                     <br>
                     <select id="aggiornamento_prodotti" class="custom-select" onchange="filtraProdottiAggiornamento();">
                         <option value="*" selected>*</option>
+<!--Esegue una SELECT sul database chiedendo il nome di tutti i prodotti e li inserisce come
+elementi <option></option> nell'elemento <select></select> corrispondente.-->
 <?php
     $conn = @pg_connect(stringaConnessioneDB());
 
@@ -485,8 +532,12 @@
         @pg_close($conn);
     }
 ?>
+<!---->
                     </select>
                 </div>
+                <!---->
+<!--Crea la tabella. Esegue una SELECT sul database chiedendo il nome e la quantità disponibile
+di tutti i prodotti e li inserisce nella tabella appena creata.-->
 <?php
     echo("
     <div class='container table-responsive' id='div_aggiornamento_prodotti'>
@@ -545,8 +596,14 @@
     @pg_free_result($ris);
     @pg_close($conn);
 ?>
+<!---->
             </div>
+            <!---->
         </div>
+        <!---->
+<!--Crea il footer, gestisce l'evento "click" dei bottoni verdi e dei bottoni rossi piccoli
+della tabella per l'aggiornamento dei prodotti e gestisce l'evento "submit" della form per il
+cambio degli abbonamenti.-->
 <script type="text/javascript">
     $(document).ready(function() {
         creaFooter();
@@ -621,7 +678,7 @@
         });
     });
 </script>
-    <div></div>
+<!---->
     </main>
 </body>
 </html>

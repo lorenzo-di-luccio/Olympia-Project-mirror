@@ -1,8 +1,10 @@
+<!--Riprende la sessione PHP iniziata o ne crea una nuova.-->
 <?php
     session_start();
     include "connessione_db.php";
 ?>
-
+<!---->
+<!--PAGINA DI TRANSIZIONE-->
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -21,9 +23,18 @@
     <script type="text/javascript" src="../js/navbar.js"></script>
 </head>
 <body onload="creaNavbar(); impostaVoci(); azionaVocePrincipale('SHOP');">
+    <!--Navbar-->
     <header></header>
+    <!--Navbar-->
     <main>
         <h1 class="text-center">ACQUISTO - ANNULLA</h1>
+<!--Controlla, in ordine, che ci sia un utente loggato, che l'utente loggato sia un socio e che
+la pagina sia stata chiamata con il metodo GET o con il metodo POST. Se almeno una delle tre
+condizioni non viene soddisfatta, visualizza un alert con il corrispondente messaggio di errore.
+Se non ci sono errori, procede o con l'acquisto o con l'annullamento di un acquisto di un prodotto
+effettuando sul database le operazioni opportune. Se tutto è andato a buon fine, visualizza
+un alert che avverte del successo dell'operazione e che, appena chiuso, reindirizza alla pagina
+del carrello.-->
 <?php
     if (! isset($_SESSION["loggato"]) || ! $_SESSION["loggato"])
     {
@@ -221,6 +232,7 @@
         break;
     }
 ?>
+<!---->
     </main>
 </body>
 </html>

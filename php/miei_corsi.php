@@ -1,7 +1,9 @@
+<!--Riprende la sessione PHP iniziata o ne crea una nuova.-->
 <?php
     session_start();
     include "connessione_db.php";
 ?>
+<!---->
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -23,14 +25,21 @@
     <script type="text/javascript" src="../js/miei_corsi.js"></script>
 </head>
 <body onload="creaNavbar(); impostaVoci(); azionaVocePrincipale('UTENTE');">
+    <!--Navbar-->
     <header></header>
+    <!---->
     <main>
         <h1 class="text-center">I MIEI CORSI</h1>
+        <!--Filtro-->
         <div class="container text-center div_filtro_corsi" id="div_miei_corsi">
             <label for="miei_corsi" class="label_filtro_corsi" id="label_div_corsi">Corso</label>
             <br>
             <select id="miei_corsi" class="custom-select" onchange="filtraMieiCorsi();">
                 <option value="*" selected>*</option>
+<!--Controlla, in ordine, che ci sia un utente loggato e che l'utente loggato sia un socio. Se
+almeno una delle due condizioni non viene soddisfatta, visualizza un alert con il corrispondente
+messaggio di errore. Se non ci sono errori, procede con la creazione del filtro effettuando una
+SELECT sul database chiedendo il nome dei corsi a cui si è prenotato il socio loggato.-->
 <?php
     if (! isset($_SESSION["loggato"]) || ! $_SESSION["loggato"])
     {
@@ -89,8 +98,13 @@
         @pg_close($conn);
     }
 ?>
+<!---->
             </select>
         </div>
+        <!---->
+<!--Crea la tabella. Esegue una SELECT sul database chiedendo il nome del corso, il numero di
+prenotazione e la data di tutte le prenotazioni del socio loggato e li inserisce nella tabella
+appena creata.-->
 <?php
     echo("
     <div class='container table-responsive' id='tabella_miei_corsi'>
@@ -160,6 +174,9 @@
         </div>");
     }
 ?>
+<!---->
+<!--Crea il footer e gestisce l'evento "click" dei bottoni rossi piccoli e del bottone rosso
+grande della tabella.-->
 <script type="text/javascript">
     $(document).ready(function() {
         creaFooter();
@@ -196,6 +213,7 @@
         });
     });
 </script>
+<!---->
     </main>
 </body>
 </html>

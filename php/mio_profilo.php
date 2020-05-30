@@ -1,7 +1,9 @@
+<!--Riprende la sessione PHP iniziata o ne crea una nuova.-->
 <?php
     session_start();
     include "connessione_db.php";
 ?>
+<!---->
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -22,9 +24,15 @@
     <script type="text/javascript" src="../js/footer.js"></script>
 </head>
 <body onload="creaNavbar(); impostaVoci(); azionaVocePrincipale('UTENTE');">
+    <!--Navbar-->
     <header></header>
+    <!---->
     <main>
         <h1 class="text-center">IL MIO PROFILO</h1>
+<!--Controlla che ci sia un utente loggato. Se non c'è, visualizza un alert con il corrispondente
+messaggio di errore. Se non ci sono errori, procede con la creazione della tabella effettuando
+una SELECT chiedendo email e username dell'utente loggato e li inserisce nella tabella appena
+creata. Questa tabella è anche una form.-->
 <?php
     if (! isset($_SESSION["loggato"]) || ! $_SESSION["loggato"])
     {
@@ -50,7 +58,7 @@
 
     controllaConnessione($conn, "../html/index.html");
 
-    $sql = "SELECT email, username, ruolo FROM utente WHERE username = $1";
+    $sql = "SELECT email, username FROM utente WHERE username = $1";
     $ris = @pg_query_params($conn, $sql, array($_SESSION["username"]));
 
     controllaRisultato($conn, $ris, "Si è verificato un errore interno nel database!\n
@@ -90,6 +98,8 @@
         </div>
     </form>");
 ?>
+<!---->
+<!--Crea il footer e gestisce l'evento "submit" della form.-->
 <script type="text/javascript">
     $(document).ready(function() {
         creaFooter();
@@ -128,6 +138,7 @@
         });
     });
 </script>
+<!---->
     </main>
 </body>
 </html>

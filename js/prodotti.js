@@ -1,3 +1,7 @@
+/**
+ * Filtro. Regola la visibilità delle quantità del prodotto "Preworkout" a seconda dell'elemento
+ * <input type="radio"></input> corrispondente.
+ */
 function controllaPreWorkout()
 {
     if ($("#acquista_CX_Pre_Workout input[name=versione]:checked").val() == "25g")
@@ -12,6 +16,10 @@ function controllaPreWorkout()
     }   
 }
 
+/**
+ * Filtro. Regola la visibilità delle quantità del prodotto "BCAA Capsules" a seconda
+ * dell'elemento <input type="radio"></input> corrispondente.
+ */
 function controllaBCAACapsules()
 {
     if ($("#acquista_CX_BCAA_Capsules input[name=versione]:checked").val() == "60c")
@@ -26,6 +34,10 @@ function controllaBCAACapsules()
     }  
 }
 
+/**
+ * Filtro. Regola la visibilità delle quantità del prodotto "Protein Powder" a seconda
+ * dell'elemento <input type="radio"></input> corrispondente.
+ */
 function controllaProteinPowder()
 {
     if ($("#acquista_CX_Protein_Powder input[name=versione]:checked").val() == "25g")
@@ -40,6 +52,10 @@ function controllaProteinPowder()
     } 
 }
 
+/**
+ * Filtro. Regola la visibilità delle quantità del prodotto "Protein Powder 2" a seconda
+ * dell'elemento <input type="radio"></input> corrispondente.
+ */
 function controllaProteinPowder2()
 {
     if ($("#acquista_CX_Protein_Powder2 input[name=versione]:checked").val() == "25g")
@@ -54,6 +70,10 @@ function controllaProteinPowder2()
     } 
 }
 
+/**
+ * Filtro. Regola la visibilità delle quantità del prodotto "T-Shirt" a seconda dell'elemento
+ * <input type="radio"></input> corrispondente.
+ */
 function controllaTShirt()
 {
     var versione = $("#acquista_T-Shirt_Olympia input[name=versione]:checked").val();

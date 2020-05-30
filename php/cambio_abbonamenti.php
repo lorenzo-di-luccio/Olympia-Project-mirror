@@ -1,7 +1,10 @@
+<!--Riprende la sessione PHP iniziata o ne crea una nuova.-->
 <?php
     session_start();
     include "connessione_db.php";
 ?>
+<!---->
+<!--PAGINA DI TRANSIZIONE-->
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -20,9 +23,17 @@
     <script type="text/javascript" src="../js/navbar.js"></script>
 </head>
 <body onload="creaNavbar(); impostaVoci(); azionaVocePrincipale('GESTIONE');">
+    <!--Navbar-->
     <header></header>
+    <!---->
     <main>
         <h1 class="text-center">ACQUISTO - ANNULLA</h1>
+<!--Controlla, in ordine, che ci sia un utente loggato, che l'utente loggato sia un
+amministratore e che la pagina sia stata chiamata con il metodo POST. Se almeno una delle tre
+condizioni non viene soddisfatta, visualizza un alert con il corrispondente messaggio di errore.
+Se non ci sono errori, procede con il cambio dell'abbonamento al socio selezionato effettuando sul
+database le operazioni opportune. Se tutto è andato a buon fine, visualizza un alert che avverte
+del successo dell'operazione e che, appena chiuso, reindirizza alla pagina di gestione.-->
 <?php
     if (! isset($_SESSION["loggato"]) || ! $_SESSION["loggato"])
     {
@@ -94,6 +105,7 @@
     });
 </script>");
 ?>
+<!---->
     </main>
 </body>
 </html>
